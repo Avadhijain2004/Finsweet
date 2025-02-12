@@ -2,7 +2,7 @@ import React from 'react'
 import { NavLink, Link } from "react-router-dom";
 import logo from './../../assets/Client-First - IMAGES/Logo.svg'
 import { useEffect, useRef, useState } from "react";
-import { useAuthHook } from "../../context/AuthContext";
+
 
 const navLinks = [
   {
@@ -24,7 +24,7 @@ const navLinks = [
 ];
 
 function Header() {
-  const { token, user, role } = useAuthHook();
+  
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -57,7 +57,6 @@ function Header() {
           <img className='m-2 md:m-6 md:ml-10' src={logo} alt="Logo" />
         </div>
 
-        {/*==========Menu Button for Mobile========= */}
         <div className="md:hidden">
           <button onClick={toggleMenu}>
             <svg className="w-8 h-8 text-offWhite" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -1,6 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ContactUsSection = () => {
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+
   return (
     <div className="py-12 md:py-16 px-4 md:px-0">
       <div className="max-w-2xl mx-auto">
